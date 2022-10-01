@@ -96,3 +96,64 @@ java WhereAmI
 
 > Input your password for the ```ieng6.ucsd.edu``` account when prompted to, then log in with ```ssh```
 
+> After logging in, run the same ```javac``` and ```java``` commands and test whether or not the code works now.
+
+> Congratulations!  You have learned to successfully move local files to the remote server
+
+### Setting an SSH Key
+
+> To reduce the time moving back and forth from your computer to the remote server, create an SSH key by inputting the ```ssh-keygen``` command, resulting in:
+
+```
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/joe/.ssh/id_rsa): /Users/joe/.ssh/id_rsa
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /Users/joe/.ssh/id_rsa.
+Your public key has been saved in /Users/joe/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:jZaZH6fI8E2I1D35hnvGeBePQ4ELOf2Ge+G0XknoXp0 joe@Joes-Mac-mini.local
+The key's randomart image is:
++---[RSA 3072]----+
+|                 |
+|       . . + .   |
+|      . . B o .  |
+|     . . B * +.. |
+|      o S = *.B. |
+|       = = O.*.*+|
+|        + * *.BE+|
+|           +.+.o |
+|             ..  |
++----[SHA256]-----+
+```
+
+> **Note**: When given the prompt ```Enter file in which to save the key (/Users/joe/.ssh/id_rsa):``` press ```enter``` again to specify the default path and take note of it. In this case, the default path is ```/Users/joe/.ssh/id_rsa```.
+
+> Two new files are created on your system thanks to this command: the private key (in the file ```id_rsa```) and the public key (in the file ```id_rsa.pub```), both of which are stored in the ```.ssh``` directory on your computer.
+
+> We now need to copy the public key.  Input the following on **your computer**:
+
+```
+# on client
+$ ssh cs15lfa22--@ieng6.ucsd.edu
+<Enter Password>
+```
+
+```
+# now on server
+$ mkdir .ssh
+$ <logout>
+```
+
+```
+# back on client
+$ scp /Users/joe/.ssh/id_rsa.pub cs15lfa22--@ieng6.ucsd.edu:~/.ssh/authorized_keys
+# You use your username and the path you saw in the command above
+```
+
+> **Note** Remember to use the *id_rsa.pub* file from **your computer** by finding the file location and copy + pasting it
+
+> Now, using ```sh``` or ```scp``` should prompt a passphrase rather than a password, like the following: 
+
+![Image](https://i.imgur.com/vmR0yP9.png)
