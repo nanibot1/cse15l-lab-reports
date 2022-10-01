@@ -154,6 +154,25 @@ $ scp /Users/joe/.ssh/id_rsa.pub cs15lfa22--@ieng6.ucsd.edu:~/.ssh/authorized_ke
 
 > **Note** Remember to use the *id_rsa.pub* file from **your computer** by finding the file location and copy + pasting it
 
+> **Note** Also remember to replace ```--``` with your account name
+
 > Now, using ```sh``` or ```scp``` should prompt a passphrase rather than a password, like the following: 
 
 ![Image](https://i.imgur.com/vmR0yP9.png)
+
+### Optimizing Remote Running
+
+> With what you have learned, from utilizing commands to creating and using ssh keys, make a **local edit** to ```WhereAmI.java``` and copy it to the remote server such that when you type in the command ```ls``` in the remote server, it should look like this (without the ```WhereAmI.class```):
+
+![Image](https://i.imgur.com/dvULhtJ.png)
+
+<details>
+  <summary> Click for Answer </summary>
+
+  ```
+  cp WhereAmI.java OtherMain.java; scp OtherMain.java cs15lfa22ok@ieng6.ucsd.edu:~/
+  ```
+  
+</details>
+
+> Congratulations! You now have learned to successfully utilize the commands ```ssh``` and ```scp```.
