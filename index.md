@@ -17,3 +17,5 @@ This is a demo on Github pages.
 > [Lab Report 1](lab-report-1-week-0.html)
 
 >[Lab Report 1](https://nanibot1.github.io/cse15l-lab-reports/lab-report-1-week-0.html)
+
+>[Lab Report 2](lab-report-1)
