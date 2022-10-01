@@ -1,21 +1,14 @@
-This is a demo on Github pages.
 
-*italicized pog*
+# ***Ji Hong Cha's Lab Reports***
 
-**bolded**
+![Image](https://i.imgur.com/bxnhfeE.png)
 
-# heading 1
+## **Lab Reports**
 
-## heading 2
+>[Lab Report 0](lab-report-1-week-0.html)
 
-[Link](https://static.wikia.nocookie.net/among-us-wiki/images/3/31/Red.png/revision/latest?cb=20211122214947)
+>[Lab Report 1](lab-report-1-week-1.html)
 
-![Image](https://static.wikia.nocookie.net/among-us-wiki/images/3/31/Red.png/revision/latest?cb=20211122214947)
+---
 
-# Index
-
-> [Lab Report 1](lab-report-1-week-0.html)
-
->[Lab Report 1](https://nanibot1.github.io/cse15l-lab-reports/lab-report-1-week-0.html)
-
->[Lab Report 2](lab-report-1-week-1.html)
+[***back to top***](https://nanibot1.github.io/cse15l-lab-reports/)
