@@ -1,4 +1,4 @@
-# **SSH and SSP Tutorial for Visual Studio Code**
+
 
 ### Instaling Visual Studio Code
 
@@ -44,6 +44,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ### Trying Some Commands
 
 > Now after connecting to the server, try to run some of these commands:
+
 * ```cd ~```
 * ```cd```
 * ```ls -lat```
