@@ -14,4 +14,6 @@
 
 > either navigating your mouse to the top left and clicking on **Terminal** and clicking on **New Terminal** or...
 
+![Image](https://i.imgur.com/uK7NsGy.png)
+
 > pressing **Ctrl** + **Shift** + **`** to open up a new Terminal
