@@ -6,4 +6,5 @@
 
 ![Image](https://i.imgur.com/2XfNKHp.png)
 
-> After installing Visual Studio Code, 
+> After installing Visual Studio Code, follow the instructions given by Visual Studio Code when setting up your IDE to fit your wants and needs.
+
