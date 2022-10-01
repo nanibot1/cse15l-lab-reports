@@ -169,7 +169,7 @@ $ scp /Users/joe/.ssh/id_rsa.pub cs15lfa22--@ieng6.ucsd.edu:~/.ssh/authorized_ke
 <details>
   <summary> Click for Answer </summary>
 
-  ```
+  ```javascript
   cp WhereAmI.java OtherMain.java; scp OtherMain.java cs15lfa22ok@ieng6.ucsd.edu:~/
   ```
   
