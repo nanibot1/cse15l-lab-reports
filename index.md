@@ -1,9 +1,6 @@
-
-# ***Ji Hong Cha's Lab Reports***
-
 ![Image](https://i.imgur.com/bxnhfeE.png)
 
-## **Lab Reports**
+## ***Lab Reports***
 
 >[Lab Report 0](lab-report-1-week-0.html)
 
