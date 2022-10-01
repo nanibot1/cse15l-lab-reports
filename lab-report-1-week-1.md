@@ -20,7 +20,7 @@
 
 ### Remotely Connecting
 
-> In the Terminal, type ``` ssh cs15lfa22--@ieng6.ucsd.edu ``` where the `--` are the two letters in your account.
+> In the Terminal, type ```ssh cs15lfa22--@ieng6.ucsd.edu``` where the ```--``` are the two letters in your account.
 
 > If you are remotely connecting to this server for the first time, you may encounter this message:
 
@@ -79,7 +79,7 @@ class WhereAmI {
 }
 ```
 
-> Compile and run the WhereAmI program using the `javac` and `java` commands to test whether or not the code works. Your input should look like the following:
+> Compile and run the WhereAmI program using the ```javac``` and ```java``` commands to test whether or not the code works. Your input should look like the following:
 
 ```
 javac WhereAmI.java
@@ -90,6 +90,9 @@ java WhereAmI
 
 ![Image](https://i.imgur.com/vRz1Sph.png)
 
-> Now, to move *WhereAmI.java* to the server, run this command (using your account name in place of `--`):
+> Now, to move *WhereAmI.java* to the server, run this command (using your account name in place of ```--```):
 
 ```scp WhereAmI.java cs15lfa22--@ieng6.ucsd.edu:~/```
+
+> Input your password for the ```ieng6.ucsd.edu``` account when prompted to, then log in with ```ssh```
+
