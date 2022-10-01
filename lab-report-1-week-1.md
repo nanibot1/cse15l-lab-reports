@@ -20,12 +20,12 @@
 
 ### Remotely Connecting
 
-> In the Terminal, type ``` ssh cs15lfa22--@ieng6.ucsd.edu ``` where the ```--``` are the two letters in your account.
+> In the Terminal, type ``` ssh cs15lfa22--@ieng6.ucsd.edu ``` where the `--` are the two letters in your account.
 
 > If you are remotely connecting to this server for the first time, you may encounter this message:
 
 ```
-⤇ ssh cs15lfa22ok@ieng6.ucsd.edu
+⤇ ssh cs15lfa22--@ieng6.ucsd.edu
 The authenticity of host 'ieng6.ucsd.edu (128.54.70.227)' can't be established.
 RSA key fingerprint is SHA256:ksruYwhnYH+sySHnHAtLUHngrPEyZTDl/1x99wUQcec.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
@@ -58,6 +58,38 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 * ```cp /home/linux/ieng6/cs15lfa22/public/hello.txt ~/```
 * ```cat /home/linux/ieng6/cs15lfa22/public/hello.txt```
 
-> For example:
+> For example, using ```cat``` looks like this:
 
 ![Image](https://i.imgur.com/ZEXOzrf.png)
+
+### Moving Files with ```scp```
+
+> Using ```scp``` helps the user move files from their computer to the server.
+
+> Proceed to create a Java file **on your computer** called *WhereAmI.java* and put the following contents into it:
+
+```
+class WhereAmI {
+  public static void main(String[] args) {
+    System.out.println(System.getProperty("os.name"));
+    System.out.println(System.getProperty("user.name"));
+    System.out.println(System.getProperty("user.home"));
+    System.out.println(System.getProperty("user.dir"));
+  }
+}
+```
+
+> Compile and run the WhereAmI program using the `javac` and `java` commands to test whether or not the code works. Your input should look like the following:
+
+```
+javac WhereAmI.java
+java WhereAmI
+```
+
+> and the output should look like the following:
+
+![Image](https://i.imgur.com/vRz1Sph.png)
+
+> Now, to move *WhereAmI.java* to the server, run this command (using your account name in place of `--`):
+
+```scp WhereAmI.java cs15lfa22--@ieng6.ucsd.edu:~/```
