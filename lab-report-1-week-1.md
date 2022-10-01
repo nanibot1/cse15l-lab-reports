@@ -170,7 +170,9 @@ $ scp /Users/joe/.ssh/id_rsa.pub cs15lfa22--@ieng6.ucsd.edu:~/.ssh/authorized_ke
   <summary> Click for Answer </summary>
 
   <pre>
-  cp WhereAmI.java OtherMain.java; scp OtherMain.java cs15lfa22ok@ieng6.ucsd.edu:~/
+  cp WhereAmI.java OtherMain.java; scp OtherMain.java cs15lfa22--@ieng6.ucsd.edu:~/
+
+  # replace -- with account name
   </pre>
   
 </details>
