@@ -25,7 +25,7 @@
 > If you are remotely connecting to this server for the first time, you may encounter this message:
 
 ```
-⤇ ssh cs15lfa22zz@ieng6.ucsd.edu
+⤇ ssh cs15lfa22ok@ieng6.ucsd.edu
 The authenticity of host 'ieng6.ucsd.edu (128.54.70.227)' can't be established.
 RSA key fingerprint is SHA256:ksruYwhnYH+sySHnHAtLUHngrPEyZTDl/1x99wUQcec.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
@@ -40,3 +40,14 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 > proceed on.
 
 > Congratulations!  You have successfully connected to the server using ssh.
+
+### Trying Some Commands
+
+> Now after connecting to the server, try to run some of these commands:
+* ```cd ~```
+* ```cd```
+* ```ls -lat```
+* ```ls -a```
+* ```ls <directory> where <directory> is /home/linux/ieng6/cs15lfa22/cs15lfa22abc```, where the ```abc``` is one of the other group members’ username
+* ```cp /home/linux/ieng6/cs15lfa22/public/hello.txt ~/```
+* ```cat /home/linux/ieng6/cs15lfa22/public/hello.txt```
