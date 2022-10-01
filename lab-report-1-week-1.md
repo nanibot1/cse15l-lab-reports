@@ -8,7 +8,7 @@
 
 > After installing Visual Studio Code, follow the instructions given by Visual Studio Code when setting up your IDE to fit your wants and needs.
 
-### Remotely Connecting
+### Opening Terminal
 
 > Open up the Terminal in Visual Studio Code by:
 
@@ -17,3 +17,7 @@
 ![Image](https://i.imgur.com/uK7NsGy.png)
 
 > pressing **Ctrl** + **Shift** + **`** to open up a new Terminal
+
+### Remotely Connecting
+
+> In the Terminal, type ``` ssh cs15lfa22--@ieng6.ucsd.edu ``` where the ```--``` are the two letters in your account.
