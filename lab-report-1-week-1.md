@@ -12,11 +12,11 @@
 
 > Open up the Terminal in Visual Studio Code by:
 
-> either navigating your mouse to the top left and clicking on **Terminal** and clicking on **New Terminal** or...
+> either navigating your mouse to the top left and clicking on **Terminal** and clicking on **New Terminal**
 
 ![Image](https://i.imgur.com/uK7NsGy.png)
 
-> pressing **Ctrl** + **Shift** + **`** to open up a new Terminal.
+> or pressing **Ctrl** + **Shift** + **`** to open up a new Terminal.
 
 ### Remotely Connecting
 
@@ -39,7 +39,12 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 
 > proceed on.
 
-> Congratulations!  You have successfully connected to the server using ssh.
+> When finished with your session on the server, you can log out using:
+
+* Pressing **Ctrl** + **D**
+* Run the command ```exit```
+
+> Congratulations!  You have learned to successfully connect to the server using ssh.
 
 ### Trying Some Commands
 
@@ -52,3 +57,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 * ```ls <directory> where <directory> is /home/linux/ieng6/cs15lfa22/cs15lfa22abc```, where the ```abc``` is one of the other group members’ username
 * ```cp /home/linux/ieng6/cs15lfa22/public/hello.txt ~/```
 * ```cat /home/linux/ieng6/cs15lfa22/public/hello.txt```
+
+> For example:
+
+![Image](https://i.imgur.com/ZEXOzrf.png)
