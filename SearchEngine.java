@@ -5,8 +5,24 @@ import java.util.ArrayList;
 class Handler implements URLHandler {
     // The one bit of state on the server: a number that will be manipulated by
     // various requests.
+<<<<<<< Updated upstream
     ArrayList<String> query = new ArrayList<String>();
     ArrayList<String> searchResult = new ArrayList<String>();
+=======
+
+    String[] query = new String[];
+
+    public String handleRequest(URI url){
+        if(url.getPath().contains("/add")){
+            String[] parameters = url.getQuery().split("=");
+            if(parameters[0].equals("s")){
+                
+            }
+        }
+    }
+
+    /*
+>>>>>>> Stashed changes
 
     public String handleRequest(URI url) {
         if (url.getPath().equals("/add")){
@@ -30,7 +46,7 @@ class Handler implements URLHandler {
 s
     public String handleRequest(URI url) {
         if (url.getPath().equals("/")) {
-            return String.format("Number: %d", num);
+            return String.format("String: %d", num);
         } else if (url.getPath().equals("/increment")) {
             num += 1;
             return String.format("Number incremented!");
