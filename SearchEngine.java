@@ -16,33 +16,18 @@ class Handler implements URLHandler {
             return parameters[1] + " added!";
         }
 
-        if (url.getPath().equals("/search")){
-            String[] parameters = url.getQuery().split("=");
-            for(int i = 0; i < query.size(); i++){
-                if(query.get(i).contains(parameters[1])){
-                    searchResult.add(parameters[1]);
+        else{
+            System.out.println("Path: " + url.getPath());
+            if (url.getPath().equals("/search")){
+                String[] parameters = url.getQuery().split("=");
+                for(int i = 0; i < query.size(); i++){
+                    if(query.get(i).contains(parameters[1])){
+                        return query.get(i);
+                    }
                 }
             }
-        }
-    }
-}
-    /*
->>>>>>> Stashed changes
 
-    public String handleRequest(URI url) {
-        if (url.getPath().equals("/add")){
-            String[] parameters = url.getQuery().split("=");
-            query.add(parameters[1]);
-            return parameters[1] + " added!";
-        }
-
-        if (url.getPath().equals("/search")){
-            String[] parameters = url.getQuery().split("=");
-            for(int i = 0; i < query.size(); i++){
-                if(query.get(i).contains(parameters[1])){
-                    searchResult.add(parameters[1]);
-                }
-            }
+            return "404 Not Found!";
         }
     }
 }
