@@ -7,9 +7,13 @@ class Handler implements URLHandler {
     // various requests.
 
     ArrayList<String> query = new ArrayList<String>();
-    ArrayList<String> searchResult = new ArrayList<String>();
+    ArrayList<String> tempResult = new ArrayList<String>();
 
     public String handleRequest(URI url) {
+        if(url.getPath().equals("/")){
+            return "Please start adding to the database or searching up the queries!";
+        }
+
         if (url.getPath().equals("/add")){
             String[] parameters = url.getQuery().split("=");
             query.add(parameters[1]);
@@ -22,9 +26,14 @@ class Handler implements URLHandler {
                 String[] parameters = url.getQuery().split("=");
                 for(int i = 0; i < query.size(); i++){
                     if(query.get(i).contains(parameters[1])){
-                        return query.get(i);
+                        System.out.println(query.get(i));
+                        tempResult.add(query.get(i));
                     }
                 }
+
+                String searchResult = String.join(" and ", tempResult);
+                
+                return searchResult;
             }
 
             return "404 Not Found!";
@@ -32,32 +41,8 @@ class Handler implements URLHandler {
     }
 }
 
-/*
-s
-    public String handleRequest(URI url) {
-        if (url.getPath().equals("/")) {
-            return String.format("String: %d", num);
-        } else if (url.getPath().equals("/increment")) {
-            num += 1;
-            return String.format("Number incremented!");
-        } else {
-            System.out.println("Path: " + url.getPath());
-            if (url.getPath().contains("/add")) {
-                String[] parameters = url.getQuery().split("=");
-                if (parameters[0].equals("count")) {
-                    num += Integer.parseInt(parameters[1]);
-                    return String.format("Number increased by %s! It's now %d", parameters[1], num);
-                }
-            }
-            return "404 Not Found!";
-        }
-    }
-}
-
-*/
-
-class NumberServer {
-    public void main(String[] args) throws IOException {
+class SearchEngine {
+    public static void main(String[] args) throws IOException {
         if(args.length == 0){
             System.out.println("Missing port number! Try any number between 1024 to 49151");
             return;
