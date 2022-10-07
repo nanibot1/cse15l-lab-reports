@@ -5,12 +5,9 @@ import java.util.ArrayList;
 class Handler implements URLHandler {
     // The one bit of state on the server: a number that will be manipulated by
     // various requests.
-<<<<<<< Updated upstream
+
     ArrayList<String> query = new ArrayList<String>();
     ArrayList<String> searchResult = new ArrayList<String>();
-=======
-
-    String[] query = new String[];
 
     public String handleRequest(URI url){
         if(url.getPath().contains("/add")){
@@ -20,7 +17,7 @@ class Handler implements URLHandler {
             }
         }
     }
-
+}
     /*
 >>>>>>> Stashed changes
 
