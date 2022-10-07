@@ -9,11 +9,19 @@ class Handler implements URLHandler {
     ArrayList<String> query = new ArrayList<String>();
     ArrayList<String> searchResult = new ArrayList<String>();
 
-    public String handleRequest(URI url){
-        if(url.getPath().contains("/add")){
+    public String handleRequest(URI url) {
+        if (url.getPath().equals("/add")){
             String[] parameters = url.getQuery().split("=");
-            if(parameters[0].equals("s")){
-                
+            query.add(parameters[1]);
+            return parameters[1] + " added!";
+        }
+
+        if (url.getPath().equals("/search")){
+            String[] parameters = url.getQuery().split("=");
+            for(int i = 0; i < query.size(); i++){
+                if(query.get(i).contains(parameters[1])){
+                    searchResult.add(parameters[1]);
+                }
             }
         }
     }
