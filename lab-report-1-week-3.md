@@ -190,7 +190,7 @@ for(int i = 0; i < arr.length; i++){
 
 > The original code made it such that the elements that needed to be switched were not switching.  The arr[i] and arr[arr.length - i - 1] were reverting back to their original values.
 
-*averageWithoutLowest*
+*merge*
 
 Original Code:
 
