@@ -195,48 +195,80 @@ for(int i = 0; i < arr.length; i++){
 Original Code:
 
 ```
-static double averageWithoutLowest(double[] arr) {
-if(arr.length < 2) { return 0.0; }
-double lowest = arr[0];
-for(double num: arr) {
-    if(num < lowest) { lowest = num; }
+static List<String> merge(List<String> list1, List<String> list2) {
+List<String> result = new ArrayList<>();
+int index1 = 0, index2 = 0;
+while(index1 < list1.size() && index2 < list2.size()) {
+    if(list1.get(index1).compareTo(list2.get(index2)) < 0) {
+    result.add(list1.get(index1));
+    index1 += 1;
+    }
+    else {
+    result.add(list2.get(index2));
+    index2 += 1;
+    }
 }
-double sum = 0;
-for(double num: arr) {
-    if(num != lowest) { sum += num; }
+while(index1 < list1.size()) {
+    result.add(list1.get(index1));
+    index1 += 1;
 }
-return sum / (arr.length - 1);
+while(index2 < list2.size()) {
+    result.add(list2.get(index2));
+    index1 += 1;
+}
+return result;
 }
 ```
 
 Test Code:
 
 ```
-public void testAverageWithoutLowest() {
-double[] input1 = { 3, 3, 5 };
-assertEquals(4, ArrayExamples.averageWithoutLowest(input1), 0);
+public void testMerge() {
+    List<String> input1 = new ArrayList<>();
+    List<String> input2 = new ArrayList<>();
+    List<String> result = new ArrayList<>();
+
+    input1.add("alpha");
+    input1.add("bravo");
+
+    input2.add("charlie");
+    input2.add("delta");
+    input2.add("bicycle");
+
+    result.add("alpha");
+    result.add("bravo");
+    result.add("bicycle");
+    result.add("charlie");
+    result.add("delta");
+
+    System.out.println(String.join(" ", ListExamples.merge(input1, input2)));
+
+    assertEquals(result, ListExamples.merge(input1, input2));
 }
 ```
 
 Symptom:
 
-![Image](https://i.imgur.com/GHyJgIG.png)
+![Image](https://i.imgur.com/grWBqm3.png)
 
 Code Change:
 
 ```
-static double averageWithoutLowest(double[] arr) {
-if(arr.length < 2) { return 0.0; }
-double lowest = arr[0];
-for(double num: arr) {
-    if(num < lowest) { lowest = num; }
+static List<String> merge(List<String> list1, List<String> list2) {
+List<String> result = new ArrayList<>();
+
+for(int i = 0; i < list1.size(); i++){
+    result.add(list1.get(i));
 }
-double sum = 0;
-for(double num: arr) {
-    sum += num;
+
+for(int i = 0; i < list2.size(); i++){
+    result.add(list2.get(i));
 }
-return (sum - lowest) / (arr.length - 1);
+
+Collections.sort(result);
+
+return result;
 }
 ```
 
-> The original code made it such that other numbers that were the same as the lowest were being removed.  For example, in the list `[3, 3, 5]`, both 3's were being removed and the program was computing `5/2`, resulting in `2.5`.  The statement `if(num != lowest)` made it such that any number, regardless of duplicates, were not being considered into the sum.
+> The original code made it such that at the while loop `while(index2 < list2.size())`, there was an infinite loop because index2 was not increasing but index1 was.  Thus, why changing index1 += 1 to index2 += 2 and using Collections.sort(result) produces the correct result.
