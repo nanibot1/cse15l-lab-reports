@@ -2,7 +2,7 @@
 
 ### Part 1 - SearchEngine.java
 
-> The code behind the "Simplest Search Engine" is the SearchEngine.java and Server.java.
+> The code behind the "Simplest Search Engine" is the `SearchEngine.java` and `Server.java`.
 
 SearchEngine.java:
 ```
@@ -143,3 +143,100 @@ public class Server {
 > The handleRequest method is called when entering in http://localhost:4000/search?s=app.  The program inputs `/search?s=app` with `URI url` and uses the variable `ArrayList<String> query` to search *app* in the database and the variable `ArrayList<String> tempResult` and `String searchResult` to return any string that contains *app* in them.  If this value changes, the `tempResult` and `searchResult` would change as the program would return different results based on what the `query` is.
 
 ### Part 2 - Bugs
+
+> In the java file `ArrayExamples.java` there are a few bugs in the methods `reverseInPlace` and `averageWithoutLowest`.
+
+*reverseInPlace*
+
+Original Code:
+
+```
+static void reverseInPlace(int[] arr) {
+for(int i = 0; i < arr.length; i += 1) {
+    arr[i] = arr[arr.length - i - 1];
+}
+}
+```
+
+Test Code:
+
+```
+public void testReverseInPlace() {
+int[] input1 = { 3, 5 };
+ArrayExamples.reverseInPlace(input1);
+assertArrayEquals(new int[]{ 5, 3 }, input1);
+}
+```
+
+Symptom:
+
+![Image](https://i.imgur.com/mKjYaoH.png)
+
+Code Change:
+
+```
+static void reverseInPlace(int[] arr) {
+int[] temp = new int[arr.length];
+
+for(int i = 0, j = arr.length; i < arr.length; i++, j--) {
+    temp[j - 1] = arr[i];
+}
+
+for(int i = 0; i < arr.length; i++){
+    arr[i] = temp[i];
+}
+}
+```
+
+> The original code made it such that the elements that needed to be switched were not switching.  The arr[i] and arr[arr.length - i - 1] were reverting back to their original values.
+
+*averageWithoutLowest*
+
+Original Code:
+
+```
+static double averageWithoutLowest(double[] arr) {
+if(arr.length < 2) { return 0.0; }
+double lowest = arr[0];
+for(double num: arr) {
+    if(num < lowest) { lowest = num; }
+}
+double sum = 0;
+for(double num: arr) {
+    if(num != lowest) { sum += num; }
+}
+return sum / (arr.length - 1);
+}
+```
+
+Test Code:
+
+```
+public void testAverageWithoutLowest() {
+double[] input1 = { 3, 3, 5 };
+assertEquals(4, ArrayExamples.averageWithoutLowest(input1), 0);
+}
+```
+
+Symptom:
+
+![Image](https://i.imgur.com/GHyJgIG.png)
+
+Code Change:
+
+```
+static double averageWithoutLowest(double[] arr) {
+if(arr.length < 2) { return 0.0; }
+double lowest = arr[0];
+for(double num: arr) {
+    if(num < lowest) { lowest = num; }
+}
+double sum = 0;
+for(double num: arr) {
+    sum += num;
+}
+return (sum - lowest) / (arr.length - 1);
+}
+```
+
+> The original code made it such that other numbers that were the same as the lowest were being removed.  For example, in the list `[3, 3, 5]`, both 3's were being removed and the program was computing `5/2`, resulting in `2.5`.  The statement `if(num != lowest)` made it such that any number, regardless of duplicates, were not being considered into the sum.
