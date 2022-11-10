@@ -6,9 +6,9 @@
 
 > Three
 
-###Part 2 - Examples
+### Part 2 - Examples
 
-### `find -size +N/-N`
+###`find -size +N/-N`
 
 > Using this command will find files within a directory of a particular size or a range of size (size ±N)
 
@@ -17,3 +17,4 @@
 ![Image](https://i.imgur.com/8sUct8o.png)
 
 > This command is useful because it can assist programs with possible lines of code that filters through file sizes (for example an `if` statement that has a `size > 10000` condition).
+
