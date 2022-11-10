@@ -1,12 +1,12 @@
 # Lab Report 3
 
-## Part 1 - `find`
+### Part 1 - `find`
 
 > This command can be used to find files and directories of a particular specified condition.
 
 > Three
 
-## Part 2 - Examples
+###Part 2 - Examples
 
 ### `find -size +N/-N`
 
