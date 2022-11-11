@@ -16,19 +16,27 @@
 
 `find [directory] -size -Nc`
 
-> Using this command will find files that have less than N characters.
+> Using this command will find files that have less than N bytes.
 
 ![Image](https://i.imgur.com/8sUct8o.png)
 
-> This command is useful because it can assist programs with possible lines of code that filters through file sizes (for example an `if` statement that has a `size > 10000` condition).
+> This command is useful because it can assist the user filter through the big and small files within a directory and utilize that knowledge in their program.
 
-`find [direcotry] -size Nk`
+`find [directory] -size Nk`
 
 > Using this command will find files that are less than N KB of storage.
 
 ![Image](https://i.imgur.com/D82upEb.png)
 
 > This command is useful because it can help the user identify any files that are very big in order for them to delete them when necessary.
+
+`find [directory] -size 0c`
+
+> Using this command will find empty files.
+
+![Image](https://i.imgur.com/xckWa0i.png)
+
+> This command is useful because it can help the user find empty files in their directory, and if their program did utilize grep, see if the `grep-results.txt` file is empty.
 
 ### time
 
