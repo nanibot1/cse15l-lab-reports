@@ -8,7 +8,7 @@
 
 ### Part 2 - Examples
 
-`find -size +N/-N`
+`find -size ±N`
 
 > Using this command will find files within a directory of a particular size or a range of size (size ±N)
 
@@ -18,4 +18,8 @@
 
 > This command is useful because it can assist programs with possible lines of code that filters through file sizes (for example an `if` statement that has a `size > 10000` condition).
 
-'find 
+`find -_time`
+
+> Using these commands will find files that were modified within a time frame.
+
+> `find directory -ctime ±N`
