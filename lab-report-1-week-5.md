@@ -4,8 +4,6 @@
 
 > This command can be used to find files and directories of a particular specified condition.
 
-> Three
-
 ### Part 2 - Command-Line Options and Examples
 
 ### size
@@ -58,7 +56,7 @@
 
 > This command is useful because, like the previous one, your program can access files that were opened within a set period of time.
 
-3: `find [directory] -mtime N'`
+3: `find [directory] -mtime N`
 
 > Using this command will find files that were modified precisely at N days.
 
