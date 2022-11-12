@@ -70,14 +70,26 @@
 
 > These commands will help the user find files of a specific type and even be able to remove them.
 
-1. `find / -perm /u=r`
+1. `find [directory] -perm /u=r`
+
+> Using this command will find read-only files in a given directory.
 
 ![Image](https://i.imgur.com/wpRKKic.png)
 
-2. `find / -perm /a=x`
+> This command can be useful to the user because in a directory full of PDFs, EXEs, and etc., the user can find the PDFs in it.
+
+2. `find [directory] -perm /a=x`
+
+> Using this command will find executable files in a given directory.
 
 ![Image](https://i.imgur.com/3qo2CQa.png)
 
-3. `find . -type f -name "tecmint.txt" -exec rm -f {} \;`
+> This command can be useful to the user because in a directory full of PDFs, EXEs, and etc., the user can find the EXEs in it.
+
+3. `find [directory] -type f -name [file] -exec rm -f {} \;`
+
+> Using this command will find and remove a single file in a given directory.
 
 ![Image](https://i.imgur.com/xioyK6e.png)
+
+> This command can be useful to the user because it can help the user be more efficient when removing files in a directory full of different file types.
