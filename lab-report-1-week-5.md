@@ -6,7 +6,7 @@
 
 > Three
 
-### Part 2 - Examples
+### Part 2 - Command-Line Options and Examples
 
 ### size
 
@@ -14,7 +14,7 @@
 
 > Using this command will find files within a directory of a particular size or a range of size (size ±N)
 
-1. `find [directory] -size -Nc`
+1: `find [directory] -size -Nc`
 
 > Using this command will find files that have less than N bytes.
 
@@ -22,7 +22,7 @@
 
 > This command is useful because it can assist the user filter through the big and small files within a directory and utilize that knowledge in their program.
 
-2. `find [directory] -size Nk`
+2: `find [directory] -size Nk`
 
 > Using this command will find files that are less than N KB of storage.
 
@@ -30,7 +30,7 @@
 
 > This command is useful because it can help the user identify any files that are very big in order for them to delete them when necessary.
 
-3. `find [directory] -size 0c`
+3: `find [directory] -size 0c`
 
 > Using this command will find empty files.
 
@@ -42,7 +42,7 @@
 
 > Using these three commands will help the user find files that were modified at specific time periods.
 
-1. `find [directory] -ctime +N`
+1: `find [directory] -ctime +N`
 
 > Using this command will find files that were modified beyond N days.
 
@@ -50,7 +50,7 @@
 
 > This command is useful because, if there are files that the user modified fairly recently in a directory, the user will be able to identify which files they did not modify recently.
 
-2. `find [directory] -atime -N`
+2: `find [directory] -atime -N`
 
 > Using this command will find files that were opened within the last N days.
 
@@ -58,7 +58,7 @@
 
 > This command is useful because, like the previous one, your program can access files that were opened within a set period of time.
 
-3. `find [directory] -mtime N'`
+3: `find [directory] -mtime N'`
 
 > Using this command will find files that were modified precisely at N days.
 
@@ -70,7 +70,7 @@
 
 > These commands will help the user find files of a specific type and even be able to remove them.
 
-1. `find [directory] -perm /u=r`
+1: `find [directory] -perm /u=r`
 
 > Using this command will find read-only files in a given directory.
 
@@ -78,7 +78,7 @@
 
 > This command can be useful to the user because in a directory full of PDFs, EXEs, and etc., the user can find the PDFs in it.
 
-2. `find [directory] -perm /a=x`
+2: `find [directory] -perm /a=x`
 
 > Using this command will find executable files in a given directory.
 
@@ -86,7 +86,7 @@
 
 > This command can be useful to the user because in a directory full of PDFs, EXEs, and etc., the user can find the EXEs in it.
 
-3. `find [directory] -type f -name [file] -exec rm -f {} \;`
+3: `find [directory] -type f -name [file] -exec rm -f {} \;`
 
 > Using this command will find and remove a single file in a given directory.
 
