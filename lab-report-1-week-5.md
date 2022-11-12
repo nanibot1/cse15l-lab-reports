@@ -14,7 +14,7 @@
 
 > Using this command will find files within a directory of a particular size or a range of size (size ±N)
 
-`find [directory] -size -Nc`
+1. `find [directory] -size -Nc`
 
 > Using this command will find files that have less than N bytes.
 
@@ -22,7 +22,7 @@
 
 > This command is useful because it can assist the user filter through the big and small files within a directory and utilize that knowledge in their program.
 
-`find [directory] -size Nk`
+2. `find [directory] -size Nk`
 
 > Using this command will find files that are less than N KB of storage.
 
@@ -30,7 +30,7 @@
 
 > This command is useful because it can help the user identify any files that are very big in order for them to delete them when necessary.
 
-`find [directory] -size 0c`
+3. `find [directory] -size 0c`
 
 > Using this command will find empty files.
 
@@ -42,7 +42,7 @@
 
 > Using these three commands will help the user find files that were modified at specific time periods.
 
-`find [directory] -ctime +N`
+1. `find [directory] -ctime +N`
 
 > Using this command will find files that were modified beyond N days.
 
@@ -50,7 +50,7 @@
 
 > This command is useful because, if there are files that the user modified fairly recently in a directory, the user will be able to identify which files they did not modify recently.
 
-`find [directory] -atime -N`
+2. `find [directory] -atime -N`
 
 > Using this command will find files that were opened within the last N days.
 
@@ -58,10 +58,26 @@
 
 > This command is useful because, like the previous one, your program can access files that were opened within a set period of time.
 
-`find [directory] -mtime N'`
+3. `find [directory] -mtime N'`
 
 > Using this command will find files that were modified precisely at N days.
 
 ![Image](https://i.imgur.com/pOgwhg2.png)
 
 > This command is useful to the user because the command can help them pinpoint which files they modified in a directory if the directory has many files that the user would not have the time to go through.
+
+### file
+
+> These commands will help the user find files of a specific type and even be able to remove them.
+
+1. `find / -perm /u=r`
+
+![Image](https://i.imgur.com/wpRKKic.png)
+
+2. `find / -perm /a=x`
+
+![Image](https://i.imgur.com/3qo2CQa.png)
+
+3. `find . -type f -name "tecmint.txt" -exec rm -f {} \;`
+
+![Image](https://i.imgur.com/xioyK6e.png)
