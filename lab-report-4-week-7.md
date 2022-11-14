@@ -12,6 +12,20 @@ Change the name of the `start` parameter and its uses to `base`
 
 `/start<Enter>cgnbase<Esc>..`
 
+> After pressing `/start<Enter>cgnbase`, the following happens (start gets changed to base):
+
+![Image](https://i.imgur.com/Nl0hsal.png)
+
+> After pressing `<Esc>.`, the following happens:
+
+![Image](https://i.imgur.com/xiWEqK0.png)
+
+> After pressing `.`, the following happens:
+
+![Image](https://i.imgur.com/x98aNZg.png)
+
+> After pressing `<Esc>:wq`, you should be now able to save your changes.
+
 ### Part 2 - Comparison of Two Styles
 
 > Since we have learned two different styles of editing, it is time to compare the two, with the following two task:
