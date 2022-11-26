@@ -43,14 +43,14 @@ fi
 
 > 
 
-![Compile Error Submission](https://github.com/ucsd-cse15l-f22/list-methods-compile-error)
+[Compile Error Submission](https://github.com/ucsd-cse15l-f22/list-methods-compile-error)
 
 ![Image](https://i.imgur.com/XxJCjoN.png)
 
-![Incorrect File Submission](https://github.com/ucsd-cse15l-f22/list-methods-filename)
+[Incorrect File Submission](https://github.com/ucsd-cse15l-f22/list-methods-filename)
 
 ![Image](https://i.imgur.com/3PTaxhH.png)
 
-![Correct Submission](https://github.com/ucsd-cse15l-f22/list-methods-corrected)
+[Correct Submission](https://github.com/ucsd-cse15l-f22/list-methods-corrected)
 
 ![Image](https://i.imgur.com/MyEKSjf.png)
