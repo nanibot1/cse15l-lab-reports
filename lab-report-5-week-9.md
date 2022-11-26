@@ -41,7 +41,7 @@ else
 fi
 ```
 
-> 
+> Using the above grade script along with the server java files and the following student submission ListExamples.java files, you get the following results:
 
 [Compile Error Submission](https://github.com/ucsd-cse15l-f22/list-methods-compile-error)
 
@@ -54,3 +54,5 @@ fi
 [Correct Submission](https://github.com/ucsd-cse15l-f22/list-methods-corrected)
 
 ![Image](https://i.imgur.com/MyEKSjf.png)
+
+> I will be tracing the script with the compile error submission: 
