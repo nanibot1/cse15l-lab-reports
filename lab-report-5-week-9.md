@@ -66,7 +66,10 @@
 7. Line 12 with the command `fi` has no stdout nor stderror, and its return code is zero.
 8. Line 14 with the command `mv` has no stdout nor stderror, and its return code is zero.
 9. Line 15 with the command `cd` has an stdout of "/home/linux/ieng6/cs15lfa22/cs15lfa22ok/list-examples-grader", and its return code is zero.
-10. Line 17 with the command `javac` has no stdout nor stderror, and its return code is non-zero.
+10. Line 17 with the command `javac` has an stderror of "ListExamples.java:15: error: ';' expected
+        result.add(0, s)
+                        ^
+1 error", and its return code is non-zero.
 11. Line 18 with the condition `$? -eq 0` in the `if` statement returns false because `$?` is a non-zero value.
 12. Line 19 does not run because the `if` statement returns false.
 13. Line 21 with the command `echo` has an stdout of "File compilation error!", and its return code is zero.
